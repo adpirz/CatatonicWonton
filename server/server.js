@@ -14,7 +14,7 @@ var app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 
 
-app.use(express.static(__dirname + '../client'));
+app.use(express.static(__dirname + '/../client'));
 
 // Define Routes
 app.use('api/project', projectRoutes);
@@ -24,3 +24,5 @@ app.use('api/class', classRoutes);
 app.listen(8000, function () {
   console.log('listening on port 8000');
 });
+
+module.exports = app;
